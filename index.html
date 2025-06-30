@@ -1,8 +1,7 @@
-
 <!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MadAquatic</title>
   <style>
     body {
@@ -53,40 +52,41 @@
   </style>
 </head>
 <body>
-  <header>MadAquatic</header>  <!-- Products will be added here -->  <div id="product-list"></div>  <!-- Mystery Boxes -->  <div class="product">
-    <img src="https://via.placeholder.com/400x250?text=Nano+Mystery+Box" alt="Nano Fish Box" />
+  <header>MadAquatic</header>
+  <div id="product-list"></div>  <div class="product">
+    <img src="images/Nano_Box.jpg" alt="Nano Fish Box" />
     <h2>Nano Fish Mystery Box</h2>
     <p>Price: ₹500 / ₹1000</p>
     <a class="buy-btn" href="https://wa.me/916291607178?text=Hi%2C%20I%20want%20to%20buy%20Nano%20Fish%20Mystery%20Box">Buy on WhatsApp</a>
   </div>  <div class="product">
-    <img src="https://via.placeholder.com/400x250?text=Monster+Mystery+Box" alt="Monster Fish Box" />
+    <img src="images/Monster_Box.jpg" alt="Monster Fish Box" />
     <h2>Monster Fish Mystery Box</h2>
     <p>Price: ₹4000 / ₹10,000</p>
     <a class="buy-btn" href="https://wa.me/916291607178?text=Hi%2C%20I%20want%20to%20buy%20Monster%20Fish%20Mystery%20Box">Buy on WhatsApp</a>
   </div>  <script>
     const products = [
-      ["Neon Tetra", "https://upload.wikimedia.org/wikipedia/commons/e/e0/Paracheirodon_innesi_Neon_Tetra.jpg", 50],
-      ["Guppy", "https://upload.wikimedia.org/wikipedia/commons/a/a3/Guppy_male.jpg", 20],
-      ["Exotic Guppy", "https://upload.wikimedia.org/wikipedia/commons/d/d4/Guppy_Exotic.jpg", 50],
-      ["Molly", "https://upload.wikimedia.org/wikipedia/commons/e/ea/Molly_fish.jpg", 20],
-      ["Platy", "https://upload.wikimedia.org/wikipedia/commons/6/63/Platy-fish.jpg", 20],
-      ["Swordtail", "https://upload.wikimedia.org/wikipedia/commons/6/6f/Swordtail_male.jpg", 25],
-      ["Zebra Danio", "https://upload.wikimedia.org/wikipedia/commons/b/bb/Danio_rerio.jpg", 30],
-      ["Glowlight Tetra", "https://upload.wikimedia.org/wikipedia/commons/3/39/Glowlight_Tetra.jpg", 50],
-      ["Rummy Nose Tetra", "https://upload.wikimedia.org/wikipedia/commons/b/be/Hemigrammus_bleheri1.jpg", 80],
-      ["Rosy Barb", "https://upload.wikimedia.org/wikipedia/commons/f/f2/Puntius_conchonius.jpg", 80],
-      ["Albino Cory", "https://upload.wikimedia.org/wikipedia/commons/6/6e/Corydoras_albino.jpg", 50],
-      ["Chinese Algae Eater", "https://upload.wikimedia.org/wikipedia/commons/3/37/Gyrinocheilus_aymonieri_1.jpg", 90],
-      ["Otocinclus", "https://upload.wikimedia.org/wikipedia/commons/3/37/Otocinclus_vittatus.jpg", 200],
-      ["Pleco", "https://upload.wikimedia.org/wikipedia/commons/c/c0/Common_Pleco.jpg", 50],
-      ["Bristlenose Pleco", "https://upload.wikimedia.org/wikipedia/commons/f/f4/Ancistrus_dolichopterus.jpg", 200],
-      ["Angelfish", "https://upload.wikimedia.org/wikipedia/commons/2/2a/Freshwater_Angelfish.jpg", 60],
-      ["Severum", "https://upload.wikimedia.org/wikipedia/commons/f/f6/Heross.jpg", 200],
-      ["Dwarf Gourami", "https://upload.wikimedia.org/wikipedia/commons/1/1e/Dwarf_gourami_male.jpg", 60],
-      ["Oscar", "https://upload.wikimedia.org/wikipedia/commons/b/b4/Oscar_fish.jpg", 150],
-      ["Goldfish", "https://upload.wikimedia.org/wikipedia/commons/d/d6/Goldfish3.jpg", 30],
-      ["Koi Carp", "https://upload.wikimedia.org/wikipedia/commons/5/5e/Koi_pond.jpg", 30],
-      ["Shrimp", "https://upload.wikimedia.org/wikipedia/commons/1/1d/Neocaridina_davidi.jpg", 60]
+      ["Neon Tetra", "Neon_Tetra.jpg", 50],
+      ["Guppy", "Guppy.jpg", 20],
+      ["Exotic Guppy", "Exotic_Guppy.jpg", 50],
+      ["Molly", "Molly.jpg", 20],
+      ["Platy", "Platy.jpg", 20],
+      ["Swordtail", "Swordtail.jpg", 25],
+      ["Zebra Danio", "Zebra_Danio.jpg", 30],
+      ["Glowlight Tetra", "Glowlight_Tetra.jpg", 50],
+      ["Rummy Nose Tetra", "Rummy_Nose_Tetra.jpg", 80],
+      ["Rosy Barb", "Rosy_Barb.jpg", 80],
+      ["Albino Cory", "Albino_Cory.jpg", 50],
+      ["Chinese Algae Eater", "Chinese_Algae_Eater.jpg", 90],
+      ["Otocinclus", "Otocinclus.jpg", 200],
+      ["Pleco", "Pleco.jpg", 50],
+      ["Bristlenose Pleco", "Bristlenose_Pleco.jpg", 200],
+      ["Angelfish", "Angelfish.jpg", 60],
+      ["Severum", "Severum.jpg", 200],
+      ["Dwarf Gourami", "Dwarf_Gourami.jpg", 60],
+      ["Oscar", "Oscar.jpg", 150],
+      ["Goldfish", "Goldfish.jpg", 30],
+      ["Koi Carp", "Koi_Carp.jpg", 30],
+      ["Shrimp", "Shrimp.jpg", 60]
     ];
 
     const container = document.getElementById("product-list");
@@ -95,7 +95,7 @@
       const div = document.createElement("div");
       div.className = "product";
       div.innerHTML = `
-        <img src="${p[1]}" alt="${p[0]}">
+        <img src="images/${p[1]}" alt="${p[0]}">
         <h2>${p[0]}</h2>
         <p>Price: ₹${p[2]} (per pair)</p>
         <a class="buy-btn" href="https://wa.me/916291607178?text=Hi%2C%20I%20want%20to%20buy%20${encodeURIComponent(p[0])}">Buy on WhatsApp</a>
