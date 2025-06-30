@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MadAquatic</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f8ff;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    header {
+      background-color: #007a7a;
+      color: white;
+      padding: 20px;
+      font-size: 32px;
+      font-weight: bold;
+    }
+    .product {
+      background-color: #ffffff;
+      margin: 20px auto;
+      padding: 15px;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 400px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .product img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+    .product h2 {
+      margin: 10px 0 5px 0;
+    }
+    .product p {
+      margin: 5px 0;
+      font-size: 18px;
+    }
+    .buy-btn {
+      background-color: #25d366;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 8px;
+      display: inline-block;
+      margin-top: 10px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <header>MadAquatic</header>
+
+  <!-- Products will be added here -->
+  <div id="product-list"></div>
+
+  <!-- Mystery Boxes -->
+  <div class="product">
+    <img src="https://via.placeholder.com/400x250?text=Nano+Mystery+Box" alt="Nano Fish Box" />
+    <h2>Nano Fish Mystery Box</h2>
+    <p>Price: ₹500 / ₹1000</p>
+    <a class="buy-btn" href="https://wa.me/916291607178?text=Hi%2C%20I%20want%20to%20buy%20Nano%20Fish%20Mystery%20Box">Buy on WhatsApp</a>
+  </div>
+
+  <div class="product">
+    <img src="https://via.placeholder.com/400x250?text=Monster+Mystery+Box" alt="Monster Fish Box" />
+    <h2>Monster Fish Mystery Box</h2>
+    <p>Price: ₹4000 / ₹10,000</p>
+    <a class="buy-btn" href="https://wa.me/916291607178?text=Hi%2C%20I%20want%20to%20buy%20Monster%20Fish%20Mystery%20Box">Buy on WhatsApp</a>
+  </div>
+
+  <script>
+    const products = [
+      ["Neon Tetra", 50], ["Guppy", 20], ["Exotic Guppy", 50],
+      ["Molly (Small)", 20], ["Molly (Medium)", 30], ["Molly (Large)", 40],
+      ["Platy (Small)", 20], ["Platy (Medium)", 30], ["Platy (Large)", 40],
+      ["Swordtail (Small)", 25], ["Swordtail (Medium)", 35], ["Swordtail (Large)", 45],
+      ["Zebra Danio", 30], ["Glowlight Tetra", 50], ["Rummy Nose Tetra", 80],
+      ["Rosy Barb", 80], ["Albino Cory", 50], ["Chinese Algae Eater", 90],
+      ["Otocinclus", 200], ["Pleco", 50], ["Bristlenose Pleco", 200],
+      ["Angelfish", 60], ["Severum", 200], ["Dwarf Gourami", 60],
+      ["Oscar (Small)", 150], ["Oscar (Medium)", 400], ["Oscar (Large)", 800],
+      ["Goldfish (Varieties)", 30], ["Koi Carp", 30], ["Shrimp (All Colors)", 60]
+    ];
+
+    const container = document.getElementById("product-list");
+
+    products.forEach(p => {
+      const div = document.createElement("div");
+      div.className = "product";
+      div.innerHTML = `
+        <img src="https://source.unsplash.com/400x250/?${encodeURIComponent(p[0])},fish" alt="${p[0]}">
+        <h2>${p[0]}</h2>
+        <p>Price: ₹${p[1]} (per pair)</p>
+        <a class="buy-btn" href="https://wa.me/916291607178?text=Hi%2C%20I%20want%20to%20buy%20${encodeURIComponent(p[0])}">Buy on WhatsApp</a>
+      `;
+      container.appendChild(div);
+    });
+  </script>
+</body>
+</html>
