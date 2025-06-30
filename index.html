@@ -10,11 +10,12 @@
       padding: 0;
     }
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f0f8ff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #e0f7fa, #e1f5fe);
+      color: #004d40;
     }
     header {
-      background-color: #007a7a;
+      background-color: #004d40;
       color: white;
       padding: 20px;
       text-align: center;
@@ -22,16 +23,20 @@
       font-weight: bold;
     }
     nav {
-      background-color: #006060;
+      background-color: #00695c;
       display: flex;
       justify-content: center;
       gap: 30px;
-      padding: 10px 0;
+      padding: 12px 0;
     }
     nav a {
       color: white;
       text-decoration: none;
       font-size: 18px;
+      font-weight: 600;
+    }
+    nav a:hover {
+      text-decoration: underline;
     }
     .banner {
       background: url('https://images.unsplash.com/photo-1610878180933-9bcefac1d8d6') no-repeat center center/cover;
@@ -40,15 +45,16 @@
       justify-content: center;
       align-items: center;
       color: white;
-      font-size: 28px;
+      font-size: 30px;
       font-weight: bold;
       text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
     }
     .section-title {
       text-align: center;
       margin: 30px 0 10px;
-      font-size: 26px;
-      color: #007a7a;
+      font-size: 28px;
+      color: #00695c;
+      font-weight: bold;
     }
     .products {
       display: flex;
@@ -59,11 +65,15 @@
     }
     .product {
       background-color: #ffffff;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
       width: 300px;
       padding: 15px;
       text-align: center;
+      transition: transform 0.3s;
+    }
+    .product:hover {
+      transform: translateY(-5px);
     }
     .product img {
       width: 100%;
@@ -86,9 +96,29 @@
       display: inline-block;
       margin-top: 10px;
       font-size: 16px;
+      font-weight: bold;
+    }
+    .buy-btn:hover {
+      background-color: #1ebe57;
+    }
+    #about {
+      padding: 40px 20px;
+      background-color: #e0f2f1;
+      text-align: center;
+    }
+    #about h2 {
+      font-size: 28px;
+      margin-bottom: 10px;
+      color: #004d40;
+    }
+    #about p {
+      font-size: 18px;
+      max-width: 600px;
+      margin: 0 auto;
+      color: #004d40;
     }
     footer {
-      background-color: #007a7a;
+      background-color: #004d40;
       color: white;
       text-align: center;
       padding: 20px;
@@ -102,7 +132,7 @@
     <a href="#">Home</a>
     <a href="#shop">Shop</a>
     <a href="#about">About</a>
-    <a href="#contact">Contact</a>
+    <a href="https://wa.me/916291607178?text=Hi%2C%20I%20have%20a%20question%20about%20your%20shop" target="_blank">Contact</a>
   </nav>
   <div class="banner">Welcome to MadAquatic - Your Fish Paradise</div>  <h2 class="section-title">Mystery Boxes</h2>
   <div class="products">
@@ -118,21 +148,36 @@
       <p>Price: ₹4000 / ₹10,000</p>
       <a class="buy-btn" href="https://wa.me/916291607178?text=Hi%2C%20I%20want%20to%20buy%20Monster%20Fish%20Mystery%20Box">Buy on WhatsApp</a>
     </div>
-  </div>  <h2 class="section-title">Popular Fish</h2>
-  <div class="products" id="product-list"></div>  <footer>
+  </div>  <h2 class="section-title">Available Fish Stock (Per Pair)</h2>
+  <div class="products" id="product-list"></div>  <section id="about">
+    <h2>About Us</h2>
+    <p>MadAquatic is a small online store that provides high-quality fishes at affordable prices. Customer satisfaction is our top priority and we ensure the best health and care for every fish we deliver.</p>
+  </section>  <footer>
     <p>&copy; 2025 MadAquatic | Built with ❤️ by Roupyadeep</p>
   </footer>  <script>
     const products = [
-      ["Neon Tetra", "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Paracheirodon_innesi.jpg/640px-Paracheirodon_innesi.jpg", 50],
-      ["Guppy", "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Guppy_male.jpg/640px-Guppy_male.jpg", 20],
-      ["Exotic Guppy", "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Guppy.jpg/640px-Guppy.jpg", 50],
-      ["Molly", "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Black_Molly.jpg/640px-Black_Molly.jpg", 20],
-      ["Platy", "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Xiphophorus_maculatus_-_Platy.jpg/640px-Xiphophorus_maculatus_-_Platy.jpg", 20],
-      ["Swordtail", "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Xiphophorus_helleri.jpg/640px-Xiphophorus_helleri.jpg", 25],
-      ["Zebra Danio", "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Danio_rerio3.jpg/640px-Danio_rerio3.jpg", 30],
-      ["Goldfish", "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Goldfish3.jpg/640px-Goldfish3.jpg", 30],
-      ["Koi Carp", "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Koi_aka.jpg/640px-Koi_aka.jpg", 30],
-      ["Shrimp", "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Caridina_japonica.jpg/640px-Caridina_japonica.jpg", 60]
+      ["Neon Tetra", "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Paracheirodon_innesi.jpg/640px-Paracheirodon_innesi.jpg", "₹50"],
+      ["Guppy", "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Guppy_male.jpg/640px-Guppy_male.jpg", "₹20"],
+      ["Exotic Guppy", "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Guppy.jpg/640px-Guppy.jpg", "₹50"],
+      ["Molly (Small / Med / Large)", "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Black_Molly.jpg/640px-Black_Molly.jpg", "₹20 / ₹30 / ₹40"],
+      ["Platy (Small / Med / Large)", "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Xiphophorus_maculatus_-_Platy.jpg/640px-Xiphophorus_maculatus_-_Platy.jpg", "₹20 / ₹30 / ₹40"],
+      ["Swordtail (Small / Med / Large)", "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Xiphophorus_helleri.jpg/640px-Xiphophorus_helleri.jpg", "₹25 / ₹35 / ₹45"],
+      ["Zebra Danio", "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Danio_rerio3.jpg/640px-Danio_rerio3.jpg", "₹30"],
+      ["Glowlight Tetra", "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Glowlight_Tetra_Hemigrammus_erythrozonus.jpg/640px-Glowlight_Tetra_Hemigrammus_erythrozonus.jpg", "₹50"],
+      ["Rummy Nose Tetra", "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Hemigrammus_bleheri.jpg/640px-Hemigrammus_bleheri.jpg", "₹80"],
+      ["Rosy Barb", "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Puntius_conchonius_female.jpg/640px-Puntius_conchonius_female.jpg", "₹80"],
+      ["Albino Cory", "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Corydoras_albino.jpg/640px-Corydoras_albino.jpg", "₹50"],
+      ["Chinese Algae Eater", "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Gyrinocheilus_aymonieri_02.jpg/640px-Gyrinocheilus_aymonieri_02.jpg", "₹90"],
+      ["Otocinclus", "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Otocinclus_affinis.jpg/640px-Otocinclus_affinis.jpg", "₹200"],
+      ["Pleco", "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Hypostomus_plecostomus.jpg/640px-Hypostomus_plecostomus.jpg", "₹50"],
+      ["Bristlenose Pleco", "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Ancistrus_cirrhosus.jpg/640px-Ancistrus_cirrhosus.jpg", "₹200"],
+      ["Angelfish", "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Pterophyllum_scalare.jpg/640px-Pterophyllum_scalare.jpg", "₹60"],
+      ["Severum", "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Heros_severus.jpg/640px-Heros_severus.jpg", "₹200"],
+      ["Dwarf Gourami", "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Dwarf_gourami_female.jpg/640px-Dwarf_gourami_female.jpg", "₹60"],
+      ["Oscar (S / M / L)", "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Astronotus_ocellatus.jpg/640px-Astronotus_ocellatus.jpg", "₹150 / ₹400 / ₹800"],
+      ["Goldfish", "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Goldfish3.jpg/640px-Goldfish3.jpg", "₹30"],
+      ["Koi Carp", "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Koi_aka.jpg/640px-Koi_aka.jpg", "₹30"],
+      ["Shrimp", "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Caridina_japonica.jpg/640px-Caridina_japonica.jpg", "₹60"]
     ];
 
     const container = document.getElementById("product-list");
@@ -143,7 +188,7 @@
       div.innerHTML = `
         <img src="${p[1]}" alt="${p[0]}">
         <h2>${p[0]}</h2>
-        <p>Price: ₹${p[2]} (per pair)</p>
+        <p>Price: ${p[2]}</p>
         <a class="buy-btn" href="https://wa.me/916291607178?text=Hi%2C%20I%20want%20to%20buy%20${encodeURIComponent(p[0])}">Buy on WhatsApp</a>
       `;
       container.appendChild(div);
